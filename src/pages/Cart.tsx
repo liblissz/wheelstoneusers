@@ -113,7 +113,7 @@ const Cart = () => {
 
   const subtotal = getTotalPrice();
   const shipping = subtotal > 50000 ? 0 : 999; // Free shipping over $50k
-  const tax = subtotal * 0.0875; // 8.75% tax
+  const tax = subtotal * 0.00875; // 8.75% tax
   const total = subtotal + shipping + tax;
 const [secondload, setsecondload] = useState(false)
 const handlePlaceOrder = async () => {
