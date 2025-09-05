@@ -27,9 +27,9 @@ useEffect(()=>{
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-automotive-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">W</span>
+                <span className="text-white font-bold text-lg">N</span>
               </div>
-              <span className="font-display font-bold text-xl">WheelStone</span>
+              <span className="font-display font-bold text-xl">Next Ride Ready</span>
             </div>
             <p className="text-gray-300 text-sm">
               Your trusted partner in finding the perfect car. Quality vehicles, transparent pricing, exceptional service.
