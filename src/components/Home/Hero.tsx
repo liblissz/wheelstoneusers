@@ -32,11 +32,14 @@ const Hero = () => {
                 <label className="text-sm font-medium text-gray-700">Make</label>
                 <select className="w-full p-3 border border-gray-300 rounded-lg text-gray-800 bg-white">
                   <option>Any Make</option>
-                  <option>BMW</option>
-                  <option>Mercedes-Benz</option>
-                  <option>Audi</option>
-                  <option>Toyota</option>
-                  <option>Honda</option>
+                  <option> Volkswagen</option>
+                  <option>Kia</option>
+                  <option>Ford</option>
+                  <option>Nissan</option>
+                  <option>Hyundai</option>
+                  <option>MG</option>
+                  <option>Vauxhall</option>
+                  <option>Peugeot</option>
                 </select>
               </div>
               
