@@ -396,7 +396,7 @@ const deletecart = async () => {
       monthly - £1000
     </option>
      <option  value="weekly - £500">
-      monthly - £500
+      weekly - £500
     </option>
  
 </select>
