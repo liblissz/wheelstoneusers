@@ -17,6 +17,7 @@ const parsePrice = (val) => {
 const Cart = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(false);
+    const [method, setmethod] = useState("");
   const [removing, setRemoving] = useState(null); // cardId being removed
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -113,7 +114,7 @@ const Cart = () => {
 
   const subtotal = getTotalPrice();
   const shipping = subtotal > 50000 ? 0 : 999; // Free shipping over $50k
-  const tax = subtotal * 0.00875; // 8.75% tax
+  const tax = subtotal * 0.00000875; // 8.75% tax
   const total = subtotal + shipping + tax;
 const [secondload, setsecondload] = useState(false)
 const handlePlaceOrder = async () => {
@@ -363,6 +364,7 @@ const deletecart = async () => {
                   </div>
                 </div>
                 <div className="space-y-2" style={{marginBottom: "12px"}}>
+                  
                 <label className="text-sm font-medium text-gray-700">Preffered Payment Method:</label>
               <select
   className="w-full p-3 border border-gray-300 rounded-lg text-gray-800 bg-white"
@@ -371,10 +373,32 @@ const deletecart = async () => {
 >
   <option>--select a payment method--</option>
   {pay.map((item, idx) => (
-    <option key={idx} value={item.paymentname}>
-      {item.paymentname}
+    <option key={idx} value={item.paymentname+ "" +"-"+ "" + method}>
+      {item.paymentname+ "" + "-"+ ""  + method} 
     </option>
   ))}
+</select>
+
+              </div>
+                   <div className="space-y-2" style={{marginBottom: "12px"}}>
+                  
+                <label className="text-sm font-medium text-gray-700">How Do You Want To Make Payments:</label>
+              <select
+  className="w-full p-3 border border-gray-300 rounded-lg text-gray-800 bg-white"
+  value={method}
+  onChange={(e) => setmethod(e.target.value)}
+>
+  <option>--select a payment detail--</option>
+ <option  value="complete payment">
+     complete payment
+    </option>
+    <option  value="monthly - £1000">
+      monthly - £1000
+    </option>
+     <option  value="weekly - £500">
+      monthly - £500
+    </option>
+ 
 </select>
 
               </div>
