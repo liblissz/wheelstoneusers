@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Automotive Design System - All colors, gradients, fonts defined here */
+
+@layer base {
+  :root {
+    /* Core system colors */
+    --background: 210 40% 98%;
+    --foreground: 225 30% 10%;
+
+    --card: 210 40% 98%;
+    --card-foreground: 225 30% 10%;
+
+    --popover: 210 40% 98%;
+    --popover-foreground: 225 30% 10%;
+
+    /* Automotive primary - deep navy */
+    --primary: 220 85% 15%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Steel secondary */
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 225 30% 10%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 15% 45%;
+
+    /* Orange accent */
+    --accent: 25 95% 53%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 220 85% 15%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 225 30% 8%;
+    --foreground: 210 40% 95%;
+
+    --card: 225 30% 10%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 225 30% 10%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 225 30% 10%;
+
+    --secondary: 225 20% 15%;
+    --secondary-foreground: 210 40% 95%;
+
+    --muted: 225 20% 15%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 220 85% 60%;
+    --accent-foreground: 225 30% 10%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 210 40% 95%;
+
+    --border: 225 20% 18%;
+    --input: 225 20% 18%;
+    --ring: 25 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-automotive antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+  }
+}
+
+@layer components {
+  /* Hero button variant */
+  .btn-hero {
+    @apply bg-automotive-accent text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+
+  /* Premium button variant */
+  .btn-premium {
+    @apply bg-automotive-primary text-white font-medium px-6 py-3 rounded-lg border border-automotive-primary hover:bg-white hover:text-automotive-primary transition-all duration-300;
+  }
+
+  /* Steel button variant */
+  .btn-steel {
+    @apply bg-automotive-secondary text-automotive-dark font-medium px-6 py-3 rounded-lg border border-automotive-steel hover:bg-automotive-steel hover:text-white transition-all duration-300;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer;
+  }
+
+  /* Premium gradient text */
+  .text-gradient {
+    @apply bg-premium-gradient bg-clip-text text-transparent;
+  }
+
+  /* Steel gradient background */
+  .bg-steel-section {
+    @apply bg-steel-gradient;
+  }
+
+  /* Automotive section background */
+  .bg-automotive-section {
+    @apply bg-automotive-gradient;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-automotive-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-automotive-steel rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-automotive-primary;
+}
