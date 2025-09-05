@@ -342,17 +342,17 @@ const deletecart = async () => {
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span className="font-medium text-foreground">${subtotal.toLocaleString()}</span>
+                    <span className="font-medium text-foreground"> £{subtotal.toLocaleString()}</span>
                   </div>
 
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Shipping & Handling</span>
-                    <span className="font-medium text-foreground">{shipping === 0 ? "Free" : `$${shipping.toLocaleString()}`}</span>
+                    <span className="font-medium text-foreground">{shipping === 0 ? "Free" : ` £${shipping.toLocaleString()}`}</span>
                   </div>
 
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Tax</span>
-                    <span className="font-medium text-foreground">${Math.round(tax).toLocaleString()}</span>
+                    <span className="font-medium text-foreground"> £{Math.round(tax).toLocaleString()}</span>
                   </div>
 
                   <hr className="border-border" />
@@ -378,12 +378,15 @@ const deletecart = async () => {
 </select>
 
               </div>
+                    <p className="text-xs text-muted-foreground mt-4 text-center">after placing the order we will get your location and other credentials of yours from you login detial in our database, we will sheep your order to you and give you a call after making payments</p>
+             
                 <Button onClick={handlePlaceOrder} className="w-full btn-hero text-base" size="lg" disabled={secondload}>
                   {secondload ? "loading" :"Place Order"}
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
 
                 <p className="text-xs text-muted-foreground mt-4 text-center">By placing your order, you agree to our terms and conditions.</p>
+             
               </CardContent>
             </Card>
           </div>
