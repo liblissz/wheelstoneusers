@@ -149,13 +149,13 @@ const Header = () => {
   </Button>
 
   {/* Hamburger Menu for mobile */}
-  <Button
+{/*   <Button
     variant="ghost"
     size="icon"
     className="md:hidden p-2 rounded-full hover:bg-gray-100 transition flex-shrink-0"
   >
     <Menu className="h-5 w-5" />
-  </Button>
+  </Button> */}
 </div>
 
 
