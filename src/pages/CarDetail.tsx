@@ -166,7 +166,7 @@ const CarDetails = () => {
   ].filter(Boolean);
 
   const displayPrice = car.price
-    ? ` £{Number(car.price).toLocaleString()}`
+    ? ` ${Number(car.price).toLocaleString()}`
     : "Contact";
 
   return (
@@ -193,7 +193,7 @@ const CarDetails = () => {
                 <img
                   key={i}
                   src={img}
-                  alt={` £{car.title}  £{i + 1}`}
+                  alt={` ${car.title}  ${i + 1}`}
                   className={`w-24 h-16 object-cover rounded-md cursor-pointer border-2 ${
                     img === selectedImage ? "border-blue-500" : "border-gray-200"
                   } transition-all duration-300`}
