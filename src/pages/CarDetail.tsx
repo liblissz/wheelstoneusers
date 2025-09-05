@@ -24,7 +24,7 @@ const CarDetails = () => {
         const fetchedCar = response.data?.finduser || null;
         setCar(fetchedCar);
 
-        // Set the first image as the selected one
+        // Set first image as selected
         const images = [
           fetchedCar?.img1,
           fetchedCar?.img2,
@@ -46,7 +46,6 @@ const CarDetails = () => {
     };
 
     fetchCar();
-
     return () => {
       isMounted = false;
     };
@@ -73,7 +72,6 @@ const CarDetails = () => {
     );
   }
 
-  // Collect all images dynamically
   const images = [
     car.img1,
     car.img2,
@@ -97,7 +95,7 @@ const CarDetails = () => {
             <img
               src={selectedImage}
               alt={car.title || "Car image"}
-              className="w-full h-96 object-cover rounded-lg shadow"
+              className="w-full h-96 object-cover rounded-lg shadow transition-all duration-500"
             />
           ) : (
             <div className="w-full h-96 flex items-center justify-center rounded-lg bg-gray-100">
@@ -107,7 +105,7 @@ const CarDetails = () => {
 
           {/* Smooth sliding thumbnails */}
           {images.length > 1 && (
-            <div className="mt-4 w-full overflow-x-auto flex gap-2 py-2">
+            <div className="mt-4 w-full overflow-x-auto flex gap-2 py-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
               {images.map((img, i) => (
                 <img
                   key={i}
@@ -115,7 +113,7 @@ const CarDetails = () => {
                   alt={`${car.title} ${i + 1}`}
                   className={`w-24 h-16 object-cover rounded-md cursor-pointer border-2 ${
                     img === selectedImage ? "border-blue-500" : "border-gray-200"
-                  } transition-all duration-300`}
+                  } transition-transform duration-300 hover:scale-105`}
                   onClick={() => setSelectedImage(img)}
                 />
               ))}
@@ -129,9 +127,7 @@ const CarDetails = () => {
           <div className="text-gray-700 mb-4">
             {car.make} {car.model} · {car.year}
           </div>
-          <div className="text-2xl font-bold text-automotive-primary mb-4">
-            {displayPrice}
-          </div>
+          <div className="text-2xl font-bold text-automotive-primary mb-4">{displayPrice}</div>
           <p className="text-gray-700 mb-6">{car.description || "No description provided."}</p>
 
           <div className="flex gap-3">
