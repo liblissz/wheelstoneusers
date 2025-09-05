@@ -213,7 +213,7 @@ const CarDetails = () => {
             {car.make} {car.model} · {car.year}
           </div>
           <div className="text-2xl font-bold text-automotive-primary mb-4">
-            {displayPrice}
+             £{displayPrice}
           </div>
           <p className="text-gray-700 mb-6">
             {car.description || "No description provided."}
