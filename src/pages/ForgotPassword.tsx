@@ -169,7 +169,8 @@ export default function ForgotPassword() {
         )}
         <p
             className="text-sm text-gray-500 mt-4 text-center cursor-pointer"
-            onClick={() => window.location.href("/")}
+            onClick={() => (window.location.href = "/login")}
+
           >
             ← Go Back to login
           </p>
@@ -177,4 +178,5 @@ export default function ForgotPassword() {
     </div>
   );
 }
+
 
