@@ -51,10 +51,10 @@ const Hero = () => {
                 <label className="text-sm font-medium text-gray-700">Price Range</label>
                 <select className="w-full p-3 border border-gray-300 rounded-lg text-gray-800 bg-white">
                   <option>Any Price</option>
-                  <option>Under $20,000</option>
-                  <option>$20,000 - $40,000</option>
-                  <option>$40,000 - $60,000</option>
-                  <option>Over $60,000</option>
+                  <option>Under £10,000</option>
+                  <option>£20,000 - £40,000</option>
+                  <option>£40,000 - £60,000</option>
+                  <option>Over £60,000</option>
                 </select>
               </div>
               
