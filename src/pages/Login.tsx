@@ -232,7 +232,7 @@ const AuthForm = ({ onSuccess }) => {
                     value={number}
                     onChange={(e) => setNumber(e.target.value)}
                     className="w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                    placeholder="+237 6xx xxx xxx"
+                    placeholder="+1 6xx xxx xxx"
                   />
                 </div>
               </>
@@ -360,3 +360,4 @@ const AuthForm = ({ onSuccess }) => {
 };
 
 export default AuthForm;
+
