@@ -111,7 +111,7 @@ const [showAll, setShowAll] = useState(false);
                   <div>
                     <div className="flex items-center space-x-2">
                       <span className="font-display font-bold text-2xl text-automotive-primary">
-                        {car.price ? `$${car.price.toLocaleString()}` : "Contact"}
+                        {car.price ? `£${car.price.toLocaleString()}` : "Contact"}
                       </span>
                       {car.originalPrice && (
                         <span className="text-sm text-gray-500 line-through">
@@ -119,7 +119,7 @@ const [showAll, setShowAll] = useState(false);
                         </span>
                       )}
                     </div>
-                    <span className="text-sm text-gray-600">Cost: ${car.price.toLocaleString()}</span>
+                    <span className="text-sm text-gray-600">Cost: £{car.price.toLocaleString()}</span>
                   </div>
                 </div>
 
