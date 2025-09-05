@@ -115,7 +115,7 @@ const [showAll, setShowAll] = useState(false);
                       </span>
                       {car.originalPrice && (
                         <span className="text-sm text-gray-500 line-through">
-                          ${car.originalPrice.toLocaleString()}
+                          £{car.originalPrice.toLocaleString()}
                         </span>
                       )}
                     </div>
