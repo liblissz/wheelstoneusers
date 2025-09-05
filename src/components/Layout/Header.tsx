@@ -66,10 +66,10 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-automotive-accent rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">W</span>
+              <span className="text-white font-bold text-lg">N</span>
             </div>
             <span className="text-automotive-primary font-display font-bold text-xl">
-              WheelStone
+              Next Ride Ready
             </span>
           </Link>
 
