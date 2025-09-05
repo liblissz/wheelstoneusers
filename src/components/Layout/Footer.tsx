@@ -40,6 +40,8 @@ useEffect(()=>{
     (window.location.href =
       "https://www.tiktok.com/@nextrideready0?_t=ZN-8zTWzfjAYWk&_r=1")
   }
+                className="h-5 w-5 text-gray-400 hover:text-automotive-accent cursor-pointer transition-colors"
+
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 48 48"
     fill="currentColor"
