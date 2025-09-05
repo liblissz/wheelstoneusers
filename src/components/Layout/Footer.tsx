@@ -35,9 +35,17 @@ useEffect(()=>{
               Your trusted partner in finding the perfect car. Quality vehicles, transparent pricing, exceptional service.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 text-gray-400 hover:text-automotive-accent cursor-pointer transition-colors" />
-              <Twitter className="h-5 w-5 text-gray-400 hover:text-automotive-accent cursor-pointer transition-colors" />
-              <Instagram className="h-5 w-5 text-gray-400 hover:text-automotive-accent cursor-pointer transition-colors" />
+            <svg
+                onClick={() =>
+    (window.location.href =
+      "https://www.tiktok.com/@nextrideready0?_t=ZN-8zTWzfjAYWk&_r=1")
+  }
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 48 48"
+    fill="currentColor"
+  >
+    <path d="M41,17.07c-2.29,0-4.43-.7-6.2-1.9v13.02c0,8.08-6.55,14.63-14.63,14.63S5.54,36.27,5.54,28.19c0-7.97,6.47-14.44,14.44-14.44,1.01,0,1.97.1,2.91.3v6.08c-.94-.31-1.92-.48-2.91-.48-4.73,0-8.56,3.83-8.56,8.56s3.83,8.56,8.56,8.56c4.73,0,8.56-3.83,8.56-8.56V6.3h6.03c.38,4.07,3.6,7.33,7.54,7.6v6.17Z" />
+  </svg>
             </div>
           </div>
 
@@ -63,15 +71,15 @@ useEffect(()=>{
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-automotive-accent" />
-                <span className="text-gray-300">1-800-WHEELS-1</span>
+                <span className="text-gray-300">+447900344624</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-automotive-accent" />
-                <span className="text-gray-300">info@wheelstone.com</span>
+                <span className="text-gray-300">nextrideready@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-automotive-accent" />
-                <span className="text-gray-300">Los Angeles, CA</span>
+                <span className="text-gray-300">UK</span>
               </div>
             </div>
           </div>
@@ -79,7 +87,7 @@ useEffect(()=>{
 
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 WheelStone Deals. All rights reserved.
+            © 2024 Next Ride Ready Deals. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {/* <Link to="/privacy" className="text-gray-400 hover:text-automotive-accent text-sm transition-colors">Privacy Policy</Link>
